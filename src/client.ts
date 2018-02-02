@@ -67,6 +67,7 @@ export class SlackClient extends EventEmitter {
 
   getChannel = (channelId: string) => channels.info(channelId, this.token)
   getChannels = (options: channels.ListOptions) => channels.list(options)
+  createChannel = (channelName: string) => channels.create(channelName, this.token)
 
   onMessage(handler: (msg: Events.Event) => void) {
     this.on('message', handler)
