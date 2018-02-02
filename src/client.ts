@@ -13,10 +13,10 @@ export interface Options {
 }
 
 export class SlackClient extends EventEmitter {
-  socket: WebSocket | undefined
-  self: Response['self'] | undefined
+  socket: WebSocket
+  self: Response['self']
   users: Users.User[] = []
-  team: Chat.Team | undefined
+  team: Chat.Team
   ims: Chat.IM[] = []
 
   private token: string
